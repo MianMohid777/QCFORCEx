@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7deeaf4-3585-4bcf-a830-7721a3205b9c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/E-commerce-project-springBoot/JtProject/JtSpringProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ab252a6-2e6b-4f8c-8123-6850e2b8b8d3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3ab252a6-2e6b-4f8c-8123-6850e2b8b8d3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/dao/userDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/dao/userDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="f7deeaf4-3585-4bcf-a830-7721a3205b9c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,7 +94,7 @@
       <workItem from="1698128937057" duration="955000" />
       <workItem from="1698136672929" duration="1594000" />
       <workItem from="1698224172324" duration="5227000" />
-      <workItem from="1698255355459" duration="6507000" />
+      <workItem from="1698255355459" duration="6708000" />
     </task>
     <servers />
   </component>
