@@ -12,7 +12,6 @@ import javax.persistence.Table;
 
 @Entity(name="CUSTOMER")
 @Table(name="CUSTOMER")
-
 public class User {
 
 	@Id

@@ -59,7 +59,8 @@ public class UserController{
 
 	@GetMapping("/")
 	public String userlogin(Model model) {
-		
+
+		model.addAttribute("message","Tested By Quality Control Force");
 		return "userLogin";
 	}
 	@RequestMapping(value = "userloginvalidate", method = RequestMethod.POST)
@@ -73,6 +74,8 @@ public class UserController{
 			res.addCookie(new Cookie("username", u.getUsername()));
 			ModelAndView mView  = new ModelAndView("index");	
 			mView.addObject("user", u);
+
+
 			List<Product> products = this.productService.getProducts();
 
 			if (products.isEmpty()) {

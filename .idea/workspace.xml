@@ -4,11 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7deeaf4-3585-4bcf-a830-7721a3205b9c" name="Changes" comment="" />
+    <list default="true" id="f7deeaf4-3585-4bcf-a830-7721a3205b9c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/static/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ab252a6-2e6b-4f8c-8123-6850e2b8b8d3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3ab252a6-2e6b-4f8c-8123-6850e2b8b8d3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ab252a6-2e6b-4f8c-8123-6850e2b8b8d3/storage_v2/_src_/schema/ecommjava.k74ZWw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3ab252a6-2e6b-4f8c-8123-6850e2b8b8d3/storage_v2/_src_/schema/ecommjava.k74ZWw.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ab252a6-2e6b-4f8c-8123-6850e2b8b8d3/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3ab252a6-2e6b-4f8c-8123-6850e2b8b8d3/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/dao/userDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/dao/userDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/models/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/models/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/userLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/userLogin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce-project-springBoot/JtProject/JtSpringProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce-project-springBoot/JtProject/JtSpringProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQE_Testing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SQE_Testing.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,6 +66,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -47,6 +76,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/FullStackMohid/IdeaProjects/SQE_Testing/E-commerce Project/Spring_Project/src/main/webapp/static/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -61,6 +91,11 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/static/images" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="JtSpringProjectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
