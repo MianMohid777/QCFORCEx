@@ -1,16 +1,22 @@
 ## Old Version
+- https://github.com/jaygajera17/E-commerce-project-springBoot/tree/main
+- issue: everytime connection open close for access database
+- 
+## New Upgrade ( by team: QCF )
 - https://github.com/MianMohid777/QCFORCEx/tree/main
-- issue: everytime connection open close for access database 
-
+- fixed issues related to syntax
+- add more functions and remove logical errors
+- changes related to end points and connections
+- a detailed report is written in readmeByTEAM.docx
 ## New Upgrade ( what's new)
 - Hibernate configuration added( database and tables automatically create when run the project)
 - Service classes provide reusable services throughout project
-- dao classes interact with database 
+- dao classes interact with database
 - bug fixed ( product image, security , etc..)
 - support in both eclipse & intellij ide
-- overall redesign entire code that help reusability. 
+- overall redesign entire code that help reusability.
 - disclaimer: currently working on this branch so there may be some bug related to endpoint, and working on cart logic.
-  
+
 ## Quickstart
 
 1. Clone the repository
@@ -20,12 +26,12 @@
 4. Configure the database connection in `application.properties` file (check the [Database](#database) section below for more info)
 5. Run the project (by running the `main` method in `JtSpringProjectApplication.java`)
 6. Open http://localhost:8080/ in your browser!
-   * If you ran the [`basedata.sql`](https://github.com/jaygajera17/E-commerce-project-springBoot/blob/master2/JtProject/basedata.sql)script on the database, you can log in with the following credentials as admin; otherwise you'll have to manually create an admin user in the database:
-     * Username: `admin`
-     * Password: `123`
-   * Log in as a normal user:
-     * Username: `lisa`
-     * Password: `765`
+    * If you ran the [`basedata.sql`](https://github.com/jaygajera17/E-commerce-project-springBoot/blob/master2/JtProject/basedata.sql)script on the database, you can log in with the following credentials as admin; otherwise you'll have to manually create an admin user in the database:
+        * Username: `admin`
+        * Password: `123`
+    * Log in as a normal user:
+        * Username: `lisa`
+        * Password: `765`
 
 ### Database
 
@@ -37,7 +43,7 @@ MySQL or MariaDB can be used as the database for this project. The database conn
     db.password=[password, if any]
 ```
 
-Having done that, you must create some base data in the database. You can do that by running the `basedata.sql` script on the database. Check out Google for how to do that, because it depends on what tool you are using to access said database. 
+Having done that, you must create some base data in the database. You can do that by running the `basedata.sql` script on the database. Check out Google for how to do that, because it depends on what tool you are using to access said database.
 
 ### Web Directories
 
@@ -99,5 +105,6 @@ The following guides illustrate how to use some features concretely:
 ![image](https://github.com/jaygajera17/E-commerce-project-springBoot/assets/81226571/02a04d3c-1fc9-418c-b231-639f6525d07e)
 ![image](https://github.com/jaygajera17/E-commerce-project-springBoot/assets/81226571/24c4451b-43a6-4c23-a78a-786eab4303b0)
 ![image](https://github.com/jaygajera17/E-commerce-project-springBoot/assets/81226571/93c1baeb-326c-450f-867e-a883900a6644)
+
 
 
