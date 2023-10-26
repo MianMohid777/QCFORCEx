@@ -5,32 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7deeaf4-3585-4bcf-a830-7721a3205b9c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ab252a6-2e6b-4f8c-8123-6850e2b8b8d3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ab252a6-2e6b-4f8c-8123-6850e2b8b8d3/storage_v2/_src_/schema/ecommjava.k74ZWw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ab252a6-2e6b-4f8c-8123-6850e2b8b8d3/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ab252a6-2e6b-4f8c-8123-6850e2b8b8d3/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ab252a6-2e6b-4f8c-8123-6850e2b8b8d3/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ab252a6-2e6b-4f8c-8123-6850e2b8b8d3/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cf9d5c3c-d0a0-4c0c-9ae0-fd0ec5cfc845.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cf9d5c3c-d0a0-4c0c-9ae0-fd0ec5cfc845.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/dao/cartDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/dao/cartDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/services/cartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/services/cartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/adminHome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/adminHome.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/adminlogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/adminlogin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/cartproduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/cartproduct.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/categories.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/categories.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/displayCustomers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/displayCustomers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/products.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/productsAdd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/productsAdd.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/productsUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/productsUpdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/services/userService.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/services/userService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/updateProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/updateProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/uproduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/uproduct.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +85,9 @@
     <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
+    <configuration name="generated-requests | #11" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="11" requestIdentifier="#11" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -135,6 +117,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="HTTP Request.generated-requests | #11" />
       <item itemvalue="HTTP Request.generated-requests | #1" />
       <item itemvalue="HTTP Request.generated-requests | #2" />
       <item itemvalue="HTTP Request.generated-requests | #3" />
@@ -143,6 +126,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.generated-requests | #11" />
         <item itemvalue="HTTP Request.generated-requests | #3" />
         <item itemvalue="HTTP Request.generated-requests | #4" />
         <item itemvalue="HTTP Request.generated-requests | #2" />
@@ -163,7 +147,7 @@
       <workItem from="1698136672929" duration="1594000" />
       <workItem from="1698224172324" duration="5227000" />
       <workItem from="1698255355459" duration="6708000" />
-      <workItem from="1698335709645" duration="1437000" />
+      <workItem from="1698335709645" duration="3439000" />
     </task>
     <servers />
   </component>

@@ -44,8 +44,10 @@ public class UserController{
 	}
 
 	@GetMapping("/register")
-	public String registerUser()
+	public String registerUser(Model model)
 	{
+		User user = new User();
+		model.addAttribute("user",user);
 		return "register";
 	}
 
@@ -111,7 +113,7 @@ public class UserController{
 	@RequestMapping(value = "newuserregister", method = RequestMethod.POST)
 	public String newUseRegister(@ModelAttribute User user)
 	{
-		
+
 		System.out.println(user.getEmail());
 		user.setRole("ROLE_NORMAL");
 		this.userService.addUser(user);

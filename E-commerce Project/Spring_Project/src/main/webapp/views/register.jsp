@@ -9,7 +9,7 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Perishable Shop</title>
 </head>
 <body>
 
@@ -18,26 +18,29 @@
     <div class="col-sm-6">
         <h3 style="margin-top: 10px">Sign Up Now</h3>
         <p>Please fill out this to register</p>
-        <form action="newuserregister" method="post">
+        <form action = "/newuserregister" method="post" th:object="${user}">
+
+
             <div class="form-group">
                 <label for="firstName">User Name</label>
-                <input type="text" name="username" id="firstName" required placeholder="Your Username*" required class="form-control form-control-lg">
+                <input type="text" name="username" id="firstName" required placeholder="Your Username*" required class="form-control form-control-lg" th:field="*{username}">
+
             </div>
             <div class="form-group">
                 <label for="email">Email address</label>
                 <input type="email" class="form-control form-control-lg" required minlength="6" placeholder="Email*" required name="email" id="email"
-                       aria-describedby="emailHelp">
+                       aria-describedby="emailHelp" th:field="*{email}">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with
                     anyone else.</small>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" class="form-control form-control-lg" required placeholder="Password*" required name="password"
-                       id="password">
+                       id="password" th:field="*{password}">
             </div>
             <div class="form-group">
                 <%--@declare id="address"--%><label for="Address">Address</label>
-                <textarea class="form-control form-control-lg" rows="3" placeholder="Enter Your Address" name="address"></textarea>
+                <textarea class="form-control form-control-lg" rows="3" placeholder="Enter Your Address" name="address" th:field="*{address}"></textarea>
             </div>
 <span style="margin-top: 10px">Already have an account <a class="linkControl" href="/">Login here</a></span> <br><br>
             <input type="submit" value="Register" class="btn btn-primary btn-block"><br>
