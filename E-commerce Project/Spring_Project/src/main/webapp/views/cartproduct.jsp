@@ -15,13 +15,13 @@
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
 
-<title>Document</title>
+<title>Perishable Shop</title>
 </head>
 <body class="bg-light">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#"> <img
-				th:src="@{/images/logo.png}" src="../static/images/logo.png"
+				src="static/images/logo.png"
 				width="auto" height="40" class="d-inline-block align-top" alt="" />
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -36,7 +36,7 @@
 				<ul class="navbar-nav">
 					<li class="nav-item active"><a class="nav-link" href="/adminhome">Home
 							Page</a></li>
-					<li class="nav-item active"><a class="nav-link" href="/logout">Logout</a>
+					<li class="nav-item active"><a class="nav-link" href="/">Logout</a>
 					</li>
 
 				</ul>
@@ -63,9 +63,9 @@
 
 					<%
 					try {
-						String url = "jdbc:mysql://localhost:3306/springproject";
+						String url = "jdbc:mysql://localhost:3306/ecommjava";
 						Class.forName("com.mysql.cj.jdbc.Driver");
-						Connection con = DriverManager.getConnection(url, "root", "");
+						Connection con = DriverManager.getConnection(url, "root", "Mohid123");
 						Statement stmt = con.createStatement();
 						Statement stmt2 = con.createStatement();
 						ResultSet rs = stmt.executeQuery("select * from cart");

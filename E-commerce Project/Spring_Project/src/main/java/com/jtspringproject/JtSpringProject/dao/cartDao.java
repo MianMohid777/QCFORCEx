@@ -4,6 +4,7 @@ import java.util.List;
 import com.jtspringproject.JtSpringProject.models.Cart;
 import com.jtspringproject.JtSpringProject.models.Category;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,7 +24,11 @@ public class cartDao {
 
     @Transactional
     public List<Cart> getCarts() {
-        return this.sessionFactory.getCurrentSession().createQuery("from CART").list();
+
+        Query q = this.sessionFactory.getCurrentSession().createQuery("from CART");
+        return q.list();
+
+
     }
 
     @Transactional
@@ -34,5 +39,15 @@ public class cartDao {
     @Transactional
     public void deleteCart(Cart cart) {
         this.sessionFactory.getCurrentSession().delete(cart);
+    }
+
+
+    @Transactional
+    public Cart getCart(int id)
+    {
+        Query query = this.sessionFactory.getCurrentSession().createQuery("from CART where id = :id");
+        query.setParameter("id",id);
+
+        return (Cart) query.getSingleResult();
     }
 }

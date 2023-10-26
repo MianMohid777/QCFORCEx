@@ -38,7 +38,7 @@ public class AdminController {
 	
 	int adminlogcheck = 0;
 	String usernameforclass = "";
-	@RequestMapping(value = {"/"})
+	@RequestMapping(value = {"return"})
 	public String returnIndex() {
 		adminlogcheck =0;
 		usernameforclass = "";
@@ -47,36 +47,30 @@ public class AdminController {
 	
 	
 	
-	@GetMapping("/index")
+	@GetMapping("log")
 	public String index(Model model) {
 		if(usernameforclass.equalsIgnoreCase(""))
 			return "userLogin";
 		else {
 			model.addAttribute("username", usernameforclass);
-			return "index";
+			return "adminHome";
 		}
 			
 	}
-	
-	
+
 	@GetMapping("login")
 	public String adminlogin() {
 		
 		return "adminlogin";
 	}
-	@GetMapping("Dashboard")
+	@GetMapping("/Dashboard")
 	public String adminHome(Model model) {
 		if(adminlogcheck==1)
 			return "adminHome";
 		else
 			return "redirect:/admin/login";
 	}
-	@GetMapping("/loginvalidate")
-	public String adminlog(Model model) {
-		
-		return "adminlogin";
-	}
-	@RequestMapping(value = "loginvalidate", method = RequestMethod.POST)
+	@RequestMapping(value = "admin/loginvalidate", method = RequestMethod.POST)
 	public ModelAndView adminlogin( @RequestParam("username") String username, @RequestParam("password") String pass) {
 		
 		User user=this.userService.checkLogin(username, pass);
@@ -234,7 +228,7 @@ public class AdminController {
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecommjava","root","");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecommjava","root","Mohid123");
 			PreparedStatement stmt = con.prepareStatement("select * from users where username = ?"+";");
 			stmt.setString(1, usernameforclass);
 

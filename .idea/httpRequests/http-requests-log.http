@@ -1,0 +1,40 @@
+GET http://localhost:8080/admin/log
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Cookie: JSESSIONID=392AD32C466557D055053A5DE3324401
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-26T191502.200.html
+
+###
+
+POST http://localhost:8080/admin/loginvalidate
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Cookie: JSESSIONID=392AD32C466557D055053A5DE3324401
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-26T191401.400.json
+
+###
+
+GET http://localhost:8080/admin/login
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Cookie: JSESSIONID=392AD32C466557D055053A5DE3324401
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-26T191239.200.html
+
+###
+
+GET http://localhost:8080/admin/login
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-26T191212.200.html
+
+###
+

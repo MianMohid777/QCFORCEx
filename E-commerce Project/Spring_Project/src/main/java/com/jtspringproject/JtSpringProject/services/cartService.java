@@ -17,10 +17,10 @@ public class cartService {
     {
         return cartDao.addCart(cart);
     }
-//    public Cart getCart(int id)
-//    {
-//        return cartDao.getCart(id);
-//    }
+    public Cart getCart(int id)
+   {
+        return cartDao.getCart(id);
+    }
 public List<Cart> getCarts(){
     return this.cartDao.getCarts();
 }

@@ -37,7 +37,7 @@
                        id="password">
             </div>
             <div class="form-group">
-                <label for="Address">Address</label>
+                <%--@declare id="address"--%><label for="Address">Address</label>
                 <textarea class="form-control form-control-lg" rows="3" placeholder="Enter Your Address" name="address">${address }</textarea>
             </div>
 

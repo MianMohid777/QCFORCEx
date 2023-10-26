@@ -4,12 +4,7 @@ import com.jtspringproject.JtSpringProject.models.*;
 import com.jtspringproject.JtSpringProject.models.Product;
 import com.jtspringproject.JtSpringProject.models.User;
 
-import java.io.Console;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,9 +34,13 @@ public class UserController{
 	private productService productService;
 
 	@Autowired
-	public UserController(userService userService, productService productService) {
+	private cartService cartService;
+
+	@Autowired
+	public UserController(userService userService, productService productService, cartService cartService) {
 		this.userService = userService;
 		this.productService = productService;
+		this.cartService = cartService;
 	}
 
 	@GetMapping("/register")
@@ -160,11 +159,14 @@ public class UserController{
 		}
 
 
-//	@GetMapping("carts")
-//	public ModelAndView  getCartDetail()
-//	{
-//		ModelAndView mv= new ModelAndView();
-//		List<Cart>carts = cartService.getCarts();
-//	}
+	@GetMapping("carts")
+	public ModelAndView  getCartDetail()
+	{
+		ModelAndView mv= new ModelAndView("cartproduct");
+		List<Cart> carts = cartService.getCarts();
+		mv.addObject("carts",carts);
+
+		return mv;
+    }
 	  
 }

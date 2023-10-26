@@ -36,10 +36,10 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto"></ul>
 				<ul class="navbar-nav">
-					<li class="nav-item active"><a class="nav-link" href="/adminhome">Home
-							Page</a></li>
-					<li class="nav-item active"><a class="nav-link" href="/logout">Logout</a>
-					</li>
+					<li class="nav-item active"><a class="nav-link" href="/admin/Dashboard">Home
+						Page</a></li>
+					<li class="nav-item active"><a class="nav-link" href="/admin/login">Logout</a></li>
+
 
 				</ul>
 
@@ -60,7 +60,7 @@
 				<th scope="col">Quantity</th>
 				<th scope="col">Price</th>
 				<th scope="col">Weight</th>
-				<th scope="col">Descrption</th>
+				<th scope="col">Description</th>
 				<th scope="col">Delete</th>
 				<th scope="col">Update</th>
 			</tr>

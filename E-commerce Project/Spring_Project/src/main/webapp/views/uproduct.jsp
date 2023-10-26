@@ -57,7 +57,7 @@
 				<th scope="col">Quantity</th>
 				<th scope="col">Price</th>
 				<th scope="col">Weight</th>
-				<th scope="col">Descrption</th>
+				<th scope="col">Description</th>
 				<th scope="col">Buy</th>
 
 			</tr>
