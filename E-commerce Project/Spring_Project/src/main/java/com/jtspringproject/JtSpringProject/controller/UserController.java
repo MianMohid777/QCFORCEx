@@ -1,6 +1,6 @@
 package com.jtspringproject.JtSpringProject.controller;
 
-import com.jtspringproject.JtSpringProject.models.Cart;
+import com.jtspringproject.JtSpringProject.models.*;
 import com.jtspringproject.JtSpringProject.models.Product;
 import com.jtspringproject.JtSpringProject.models.User;
 
@@ -38,6 +38,12 @@ public class UserController{
 	@Autowired
 	private productService productService;
 
+	@Autowired
+	public UserController(userService userService, productService productService) {
+		this.userService = userService;
+		this.productService = productService;
+	}
+
 	@GetMapping("/register")
 	public String registerUser()
 	{
@@ -61,7 +67,7 @@ public class UserController{
 		
 		System.out.println(pass);
 		User u = this.userService.checkLogin(username, pass);
-		System.out.println(u.getUsername());
+		System.out.println("Username = " + u.getUsername());
 		if(u.getUsername().equals(username)) {	
 			
 			res.addCookie(new Cookie("username", u.getUsername()));

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/E-commerce-project-springBoot/JtProject/JtSpringProject.iml" filepath="$PROJECT_DIR$/E-commerce-project-springBoot/JtProject/JtSpringProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/SQE_Testing.iml" filepath="$PROJECT_DIR$/SQE_Testing.iml" />
     </modules>
   </component>

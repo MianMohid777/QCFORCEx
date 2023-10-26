@@ -2,8 +2,6 @@ package com.jtspringproject.JtSpringProject.dao;
 
 import java.util.List;
 
-import javax.persistence.NoResultException;
-import javax.sound.midi.Soundbank;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -11,7 +9,6 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-
 import com.jtspringproject.JtSpringProject.models.User;
 
 
@@ -26,7 +23,7 @@ public class userDao {
    @Transactional
     public List<User> getAllUser() {
         Session session = this.sessionFactory.getCurrentSession();
-		List<User>  userList = session.createQuery("from CUSTOMER").list();
+		List userList = session.createQuery("from CUSTOMER").list();
         return userList;
     }
     
@@ -37,17 +34,16 @@ public class userDao {
         return user;
 	}
     
-//    public User checkLogin() {
-//    	this.sessionFactory.getCurrentSession().
-//    }
+
     @Transactional
     public User getUser(String username,String password) {
     	Query query = sessionFactory.getCurrentSession().createQuery("from CUSTOMER where username = :username");
     	query.setParameter("username",username);
-    	
+
+
     	try {
 			User user = (User) query.getSingleResult();
-			System.out.println(user.getPassword());
+			System.out.println(user.getPassword() + "Parameter->" + password);
 			if(password.equals(user.getPassword())) {
 				return user;
 			}else {		

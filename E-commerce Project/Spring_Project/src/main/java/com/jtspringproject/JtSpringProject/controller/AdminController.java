@@ -38,7 +38,7 @@ public class AdminController {
 	
 	int adminlogcheck = 0;
 	String usernameforclass = "";
-	@RequestMapping(value = {"/","/logout"})
+	@RequestMapping(value = {"/"})
 	public String returnIndex() {
 		adminlogcheck =0;
 		usernameforclass = "";

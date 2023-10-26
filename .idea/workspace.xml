@@ -5,94 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7deeaf4-3585-4bcf-a830-7721a3205b9c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/basedata.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/HibernateConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/AdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/dao/cartDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/dao/categoryDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/dao/productDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/dao/userDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/models/Cart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/models/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/models/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/services/cartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/services/categoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/services/productService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/services/userService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/resources/Product Images/one.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/adminHome.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/adminlogin.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/cartproduct.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/categories.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/displayCustomers.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/products.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/productsAdd.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/productsUpdate.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/register.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/test.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/test2.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/updateProfile.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/uproduct.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/userLogin.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/test/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/E-commerce-project-springBoot/JtProject/JtSpringProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ab252a6-2e6b-4f8c-8123-6850e2b8b8d3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3ab252a6-2e6b-4f8c-8123-6850e2b8b8d3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ab252a6-2e6b-4f8c-8123-6850e2b8b8d3/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3ab252a6-2e6b-4f8c-8123-6850e2b8b8d3/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce-project-springBoot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/basedata.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/java/com/jtspringproject/JtSpringProject/HibernateConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/java/com/jtspringproject/JtSpringProject/controller/AdminController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/java/com/jtspringproject/JtSpringProject/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/cartDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/categoryDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/productDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/java/com/jtspringproject/JtSpringProject/dao/userDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Cart.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Category.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/java/com/jtspringproject/JtSpringProject/models/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/cartService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/categoryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/productService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/java/com/jtspringproject/JtSpringProject/services/userService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/resources/Product Images/one.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/webapp/views/adminHome.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/webapp/views/adminlogin.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/webapp/views/cartproduct.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/webapp/views/categories.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/webapp/views/displayCustomers.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/webapp/views/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/webapp/views/products.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/webapp/views/productsAdd.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/webapp/views/productsUpdate.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/webapp/views/register.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/webapp/views/test.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/webapp/views/test2.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/webapp/views/updateProfile.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/webapp/views/uproduct.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/main/webapp/views/userLogin.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/JtProject/src/test/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/JtSpringProjectApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/dao/userDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/dao/userDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +34,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -155,6 +79,17 @@
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="JtSpringProject" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.jtspringproject.JtSpringProject.JtSpringProjectApplication" />
+      <option name="WORKING_DIRECTORY" value="file://$Spring$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <selectedOptions>
+        <option name="workingDirectory" visible="false" />
+      </selectedOptions>
+      <option name="SPRING_BOOT_MAIN_CLASS" />
+      <option name="WORKING_DIRECTORY" value="file://$Spring$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -171,7 +106,8 @@
       <workItem from="1697965983679" duration="1030000" />
       <workItem from="1698128937057" duration="955000" />
       <workItem from="1698136672929" duration="1594000" />
-      <workItem from="1698224172324" duration="2903000" />
+      <workItem from="1698224172324" duration="5227000" />
+      <workItem from="1698255355459" duration="6507000" />
     </task>
     <servers />
   </component>

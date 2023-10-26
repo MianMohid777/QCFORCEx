@@ -11,7 +11,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity(name="CUSTOMER")
-@Table
+@Table(name="CUSTOMER")
+
 public class User {
 
 	@Id
@@ -27,8 +28,19 @@ public class User {
 	private String role;
 	
 	private String address;
-	
-	
+
+	public User() {
+	}
+
+	public User(int id, String username, String email, String password, String role, String address) {
+		this.id = id;
+		this.username = username;
+		this.email = email;
+		this.password = password;
+		this.role = role;
+		this.address = address;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -38,7 +50,7 @@ public class User {
 	}
 
 	public String getUsername() {
-		return username;
+		return this.username;
 	}
 
 	public void setUsername(String username) {
