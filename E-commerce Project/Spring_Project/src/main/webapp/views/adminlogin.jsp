@@ -19,6 +19,9 @@
     
         <div class="jumbotron border col-sm-5 mx-auto">
             <h2 class="text-center">Admin Login</h2><br>
+            <% String error = (request.getAttribute("error") != null) ? request.getAttribute("error").toString() : "";%>
+            <br><h3 style="color:red;">${error}</h3>
+
             <form action="admin/loginvalidate" method="post">
                 <div class="form-group">
                     <label for="username">Username :</label>

@@ -72,12 +72,12 @@ public class UserController{
 		System.out.println(pass);
 		User u = this.userService.checkLogin(username, pass);
 
-		if (u == null) {
+		if (u == null || u.getRole().equalsIgnoreCase("Role_Admin") ){
 
+			redirectAttributes.addFlashAttribute("error","Incorrect ! Username or Password");
 			return new ModelAndView("redirect:/");
 
 		} else {
-
 
 			System.out.println("Username = " + u.getUsername());
 			if (u.getUsername().equalsIgnoreCase(username.trim())) {
@@ -188,5 +188,11 @@ public class UserController{
 
 		return mv;
     }
+
+	@PostMapping("cartAdd")
+	public void addToCart()
+	{
+		;
+	}
 	  
 }

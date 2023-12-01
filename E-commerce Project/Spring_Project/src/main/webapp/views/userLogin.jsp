@@ -24,10 +24,8 @@
         <form action = "/userloginvalidate" method="post">
             <div class="form-group">
 
-                <c:if test="${not empty errorMsg}">
-                    <h3 style="color:red;"><c:out value="${errorMsg}"/></h3>
-                </c:if>
-
+                <% String error = (request.getAttribute("error") != null) ? request.getAttribute("error").toString() : "";%>
+                <br><h3 style="color:red;">${error}</h3>
 
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username" placeholder="Username*" required class="form-control form-control-lg">
@@ -40,6 +38,10 @@
             <span >Don't have an account <a class="linkControl" href="/register">Register here</a></span> <br><br>
 
             <input type="submit" value="Login" class="btn btn-primary btn-block">
+
+            <!-- Admin Login Link Button -->
+            <a href="/admin/login" class="btn btn-secondary btn-block">Admin Login</a>
+
             <% String message = request.getAttribute("message").toString(); %>
             <br><h3 style="color:red;">${message}</h3>
             </div>

@@ -23,6 +23,7 @@ import com.mysql.cj.protocol.Resultset;
 
 import net.bytebuddy.asm.Advice.This;
 import net.bytebuddy.asm.Advice.OffsetMapping.ForOrigin.Renderer.ForReturnTypeName;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 @RequestMapping("/admin")
@@ -59,8 +60,9 @@ public class AdminController {
 	}
 
 	@GetMapping("login")
-	public String adminlogin() {
-		
+	public String adminlogin(Model model) {
+
+		model.addAttribute("message","Tested By Quality Control Force");
 		return "adminlogin";
 	}
 	@GetMapping("/Dashboard")
@@ -71,12 +73,13 @@ public class AdminController {
 			return "redirect:/admin/login";
 	}
 	@RequestMapping(value = "admin/loginvalidate", method = RequestMethod.POST)
-	public ModelAndView adminlogin( @RequestParam("username") String username, @RequestParam("password") String pass) {
+	public ModelAndView adminlogin( @RequestParam("username") String username, @RequestParam("password") String pass,RedirectAttributes redirectAttributes) {
 		
 		User user=this.userService.checkLogin(username, pass);
 
 		if (user == null) {
 
+			redirectAttributes.addFlashAttribute("error","Incorrect ! Username or Password");
 			return new ModelAndView("redirect:/admin/login");
 
 		} else if(user.getRole().equals("ROLE_ADMIN")) {
@@ -85,7 +88,7 @@ public class AdminController {
 			mv.addObject("admin", user);
 			return mv;
 		}
-		return new ModelAndView("login");
+		return new ModelAndView("adminlogin");
 	}
 	@GetMapping("categories")
 	public ModelAndView getcategory() {

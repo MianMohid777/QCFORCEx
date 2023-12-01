@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7deeaf4-3585-4bcf-a830-7721a3205b9c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/adminlogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/adminlogin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/uproduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/uproduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/userLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/userLogin.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +156,8 @@
       <workItem from="1700549394567" duration="2870000" />
       <workItem from="1700601844637" duration="1618000" />
       <workItem from="1700736043506" duration="548000" />
-      <workItem from="1701404758856" duration="6056000" />
+      <workItem from="1701404758856" duration="12836000" />
+      <workItem from="1701447193295" duration="653000" />
     </task>
     <servers />
   </component>

@@ -2,5 +2,9 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/E-commerce Project/Spring_Project/basedata.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/cartproduct.jsp" dialect="MySQL" />
+  </component>
+  <component name="SqlResolveMappings">
+    <file url="file://$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/cartproduct.jsp" scope="{&quot;node&quot;:{  &quot;@negative&quot;:&quot;1&quot;,  &quot;group&quot;:{   &quot;@kind&quot;:&quot;root&quot;,   &quot;node&quot;:{    &quot;name&quot;:{     &quot;@qname&quot;:&quot;cf9d5c3c-d0a0-4c0c-9ae0-fd0ec5cfc845&quot;    },    &quot;group&quot;:{     &quot;@kind&quot;:&quot;schema&quot;,     &quot;node&quot;:{      &quot;name&quot;:{       &quot;@qname&quot;:&quot;ecommjava&quot;      }     }    }   }  } }}" />
   </component>
 </project>
