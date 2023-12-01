@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7deeaf4-3585-4bcf-a830-7721a3205b9c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/dao/userDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/dao/userDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/userLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/userLogin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/AdminController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,11 +127,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.generated-requests | #2" />
         <item itemvalue="HTTP Request.generated-requests | #1" />
         <item itemvalue="HTTP Request.generated-requests | #11" />
         <item itemvalue="HTTP Request.generated-requests | #3" />
         <item itemvalue="HTTP Request.generated-requests | #4" />
-        <item itemvalue="HTTP Request.generated-requests | #2" />
       </list>
     </recent_temporary>
   </component>
@@ -155,7 +152,7 @@
       <workItem from="1700549394567" duration="2870000" />
       <workItem from="1700601844637" duration="1618000" />
       <workItem from="1700736043506" duration="548000" />
-      <workItem from="1701404758856" duration="5292000" />
+      <workItem from="1701404758856" duration="6056000" />
     </task>
     <servers />
   </component>
