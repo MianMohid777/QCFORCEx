@@ -17,7 +17,7 @@
 <div class="container">
     <div class="col-sm-6">
         <h3 style="margin-top: 10px">Sign Up Now</h3>
-        <p>Please fill out this to register</p>
+        <p>Please fill out this to register</p><span><br><h3 style="color:red;">${error}</h3></span>
         <form action = "/newuserregister" method="post" th:object="${user}">
 
 

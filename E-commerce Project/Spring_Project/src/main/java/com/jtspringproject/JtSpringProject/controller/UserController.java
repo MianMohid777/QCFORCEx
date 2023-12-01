@@ -21,7 +21,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.jtspringproject.JtSpringProject.services.userService;
 import com.jtspringproject.JtSpringProject.services.productService;
 import com.jtspringproject.JtSpringProject.services.cartService;
-
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 
 @Controller
@@ -62,36 +62,44 @@ public class UserController{
 	public String userlogin(Model model) {
 
 		model.addAttribute("message","Tested By Quality Control Force");
+		model.addAttribute("errorMsg", "Please enter correct email and password");
+
 		return "userLogin";
 	}
 	@RequestMapping(value = "userloginvalidate", method = RequestMethod.POST)
-	public ModelAndView userlogin( @RequestParam("username") String username, @RequestParam("password") String pass,Model model,HttpServletResponse res) {
-		
+	public ModelAndView userlogin(@RequestParam("username") String username, @RequestParam("password") String pass, Model model, HttpServletResponse res, RedirectAttributes redirectAttributes) {
+
 		System.out.println(pass);
 		User u = this.userService.checkLogin(username, pass);
-		System.out.println("Username = " + u.getUsername());
-		if(u.getUsername().equals(username)) {	
-			
-			res.addCookie(new Cookie("username", u.getUsername()));
-			ModelAndView mView  = new ModelAndView("index");	
-			mView.addObject("user", u);
+
+		if (u == null) {
+
+			return new ModelAndView("redirect:/");
+
+		} else {
 
 
-			List<Product> products = this.productService.getProducts();
+			System.out.println("Username = " + u.getUsername());
+			if (u.getUsername().equalsIgnoreCase(username.trim())) {
 
-			if (products.isEmpty()) {
-				mView.addObject("msg", "No products are available");
-			} else {
-				mView.addObject("products", products);
+				res.addCookie(new Cookie("username", u.getUsername()));
+				ModelAndView mView = new ModelAndView("index");
+				mView.addObject("user", u);
+
+
+				List<Product> products = this.productService.getProducts();
+
+				if (products.isEmpty()) {
+					mView.addObject("msg", "No products are available");
+				} else {
+					mView.addObject("products", products);
+				}
+				return mView;
+
 			}
-			return mView;
-
-		}else {
-			ModelAndView mView = new ModelAndView("userLogin");
-			mView.addObject("msg", "Please enter correct email and password");
-			return mView;
 		}
-		
+
+		return new ModelAndView("userLogin");
 	}
 	
 	
@@ -111,9 +119,19 @@ public class UserController{
 		return mView;
 	}
 	@RequestMapping(value = "newuserregister", method = RequestMethod.POST)
-	public String newUseRegister(@ModelAttribute User user)
+	public String newUseRegister(@ModelAttribute User user, Model model)
 	{
 
+		List<User> allUsers = userService.getUsers();
+
+		for(User u : allUsers)
+		{
+			if(u.getUsername().equalsIgnoreCase(user.getUsername()))
+			{
+				model.addAttribute("error","Error !, Username already taken !!!!");
+				return "register";
+			}
+		}
 		System.out.println(user.getEmail());
 		user.setRole("ROLE_NORMAL");
 		this.userService.addUser(user);

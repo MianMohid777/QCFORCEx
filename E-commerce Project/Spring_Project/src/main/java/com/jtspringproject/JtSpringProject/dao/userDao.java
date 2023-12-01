@@ -42,17 +42,22 @@ public class userDao {
 
 
     	try {
-			User user = (User) query.getSingleResult();
-			if(password.equals(user.getPassword())) {
-				return user;
-			}else {		
-				return new User();
+			User user = (User)query.uniqueResult();
+
+			if(user != null) {
+
+				if (password.equals(user.getPassword())) {
+					return user;
+				}
+			}
+			else {
+				return null;
 			}
 		}catch(Exception e){
 			System.out.println(e.getMessage());
 			User user = new User();
 			return user;
 		}
-    	
+    	return null;
     }
 }

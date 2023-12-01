@@ -23,6 +23,12 @@
         <h2>User Login</h2>
         <form action = "/userloginvalidate" method="post">
             <div class="form-group">
+
+                <c:if test="${not empty errorMsg}">
+                    <h3 style="color:red;"><c:out value="${errorMsg}"/></h3>
+                </c:if>
+
+
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username" placeholder="Username*" required class="form-control form-control-lg">
             </div>
@@ -36,6 +42,7 @@
             <input type="submit" value="Login" class="btn btn-primary btn-block">
             <% String message = request.getAttribute("message").toString(); %>
             <br><h3 style="color:red;">${message}</h3>
+            </div>
             <br>
         </form>
     </div>

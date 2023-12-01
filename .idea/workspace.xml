@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7deeaf4-3585-4bcf-a830-7721a3205b9c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E-commerce Project/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/dao/userDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/java/com/jtspringproject/JtSpringProject/dao/userDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/userLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/views/userLogin.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +81,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/E-commerce Project/Spring_Project/src/main/webapp/static/images" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.JtSpringProjectApplication">
     <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
@@ -123,11 +130,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.generated-requests | #1" />
         <item itemvalue="HTTP Request.generated-requests | #11" />
         <item itemvalue="HTTP Request.generated-requests | #3" />
         <item itemvalue="HTTP Request.generated-requests | #4" />
         <item itemvalue="HTTP Request.generated-requests | #2" />
-        <item itemvalue="HTTP Request.generated-requests | #1" />
       </list>
     </recent_temporary>
   </component>
@@ -145,6 +152,10 @@
       <workItem from="1698224172324" duration="5227000" />
       <workItem from="1698255355459" duration="6708000" />
       <workItem from="1698335709645" duration="3439000" />
+      <workItem from="1700549394567" duration="2870000" />
+      <workItem from="1700601844637" duration="1618000" />
+      <workItem from="1700736043506" duration="548000" />
+      <workItem from="1701404758856" duration="5292000" />
     </task>
     <servers />
   </component>
