@@ -161,7 +161,7 @@ public class AdminController {
 	}
 
 	@RequestMapping(value = "products/add",method=RequestMethod.POST)
-	public String addProduct(@RequestParam("name") String name,@RequestParam("categoryid") int categoryId ,@RequestParam("price") int price,@RequestParam("weight") int weight, @RequestParam("quantity")int quantity,@RequestParam("description") String description,@RequestParam("productImage") String productImage) {
+	public String addProduct(@RequestParam(name = "name" ) String name ,@RequestParam("categoryid") int categoryId ,@RequestParam("price") int price,@RequestParam("weight") int weight, @RequestParam("quantity")int quantity,@RequestParam("description") String description,@RequestParam("productImage") String productImage) {
 		System.out.println(categoryId);
 		Category category = this.categoryService.getCategory(categoryId);
 		Product product = new Product();
@@ -192,8 +192,16 @@ public class AdminController {
 	@RequestMapping(value = "products/update/{id}",method=RequestMethod.POST)
 	public String updateProduct(@PathVariable("id") int id ,@RequestParam("name") String name,@RequestParam("categoryid") int categoryId ,@RequestParam("price") int price,@RequestParam("weight") int weight, @RequestParam("quantity")int quantity,@RequestParam("description") String description,@RequestParam("productImage") String productImage)
 	{
+		Product p = productService.getProduct(id);
+		p.setName(name);
+		p.setCategory(categoryService.getCategory(categoryId));
+		p.setDescription(description);
+		p.setQuantity(quantity);
+		p.setWeight(weight);
+		p.setPrice(price);
+		p.setImage(productImage);
 
-//		this.productService.updateProduct();
+        this.productService.updateProduct(p.getId(),p);
 		return "redirect:/admin/products";
 	}
 	
