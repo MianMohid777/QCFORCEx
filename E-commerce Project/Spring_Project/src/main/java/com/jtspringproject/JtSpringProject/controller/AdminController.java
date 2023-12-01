@@ -2,6 +2,7 @@ package com.jtspringproject.JtSpringProject.controller;
 
 import java.sql.*;
 import java.sql.PreparedStatement;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.Cookie;
@@ -104,21 +105,26 @@ public class AdminController {
 		}
 	}
 	@RequestMapping(value = "categories",method = RequestMethod.POST)
-	public String addCategory(@RequestParam("categoryname") String category_name)
-	{
+	public String addCategory(@RequestParam("categoryname") String category_name) {
 		System.out.println(category_name);
-		
-		Category category =  this.categoryService.addCategory(category_name);
-		if(category.getName().equals(category_name)) {
-			return "redirect:/admin/categories";
-		}else {
+		if (!category_name.trim().isEmpty()) {
+			String cat = category_name.trim();
+
+			Category category = this.categoryService.addCategory(cat);
+
+			if (category.getName().equals(category_name)) {
+				return "redirect:/admin/categories";
+
+			}
+		} else {
 			return "redirect:/admin/categories";
 		}
+		return "redirect:/admin/categories";
 	}
 
 	@RequestMapping(value = "categories/delete",method = RequestMethod.POST)
 	public String removeCategoryDb(@RequestParam("id") int id)
-	{	
+	{
 			this.categoryService.deleteCategory(id);
 			return "redirect:/admin/categories";
 	}
@@ -126,7 +132,8 @@ public class AdminController {
 	@RequestMapping(value = "categories/update",method = RequestMethod.POST)
 	public String updateCategory(@RequestParam("categoryid") int id, @RequestParam("categoryname") String categoryname)
 	{
-		Category category = this.categoryService.updateCategory(id, categoryname);
+		if(!categoryname.trim().isEmpty())
+		{Category category = this.categoryService.updateCategory(id, categoryname.trim());}
 		return "redirect:/admin/categories";
 	}
 
@@ -192,8 +199,17 @@ public class AdminController {
 	@RequestMapping(value = "products/update/{id}",method=RequestMethod.POST)
 	public String updateProduct(@PathVariable("id") int id ,@RequestParam("name") String name,@RequestParam("categoryid") int categoryId ,@RequestParam("price") int price,@RequestParam("weight") int weight, @RequestParam("quantity")int quantity,@RequestParam("description") String description,@RequestParam("productImage") String productImage)
 	{
-
-//		this.productService.updateProduct();
+		Category category = this.categoryService.getCategory(categoryId);
+		Product product = new Product();
+		product.setId(categoryId);
+		product.setName(name);
+		product.setCategory(category);
+		product.setDescription(description);
+		product.setPrice(price);
+		product.setImage(productImage);
+		product.setWeight(weight);
+		product.setQuantity(quantity);
+		this.productService.updateProduct(id,product);
 		return "redirect:/admin/products";
 	}
 	

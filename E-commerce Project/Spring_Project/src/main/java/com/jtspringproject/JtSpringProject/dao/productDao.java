@@ -35,17 +35,18 @@ public class productDao {
 	public Product getProduct(int id) {
 		return this.sessionFactory.getCurrentSession().get(Product.class, id);
 	}
-
+	@Transactional
 	public Product updateProduct(Product product){
 		this.sessionFactory.getCurrentSession().update(String.valueOf(Product.class),product);
 		return product;
 	}
+
 	@Transactional
 	public Boolean deleteProduct(int id) {
 
 		Session session = this.sessionFactory.getCurrentSession();
 		Object persistanceInstance = session.load(Product.class, id);
-
+		System.out.println(persistanceInstance.toString());
 		if (persistanceInstance != null) {
 			session.delete(persistanceInstance);
 			return true;

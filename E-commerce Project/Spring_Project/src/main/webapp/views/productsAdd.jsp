@@ -54,7 +54,7 @@
 					
 					<div class="form-group">
 						<c:forEach var="product" items="${products}">
-						<label for="name">Id</label> 
+						<label for="id">Id</label>
 						<input type="number" readonly="readonly" class="form-control border border-warning" name="id"  value="${product.id + 1} ">
 						
 						</c:forEach>
@@ -87,7 +87,7 @@
 						<input type="number" class="form-control border border-warning" required name="weight" min="1" placeholder="Weight">
 					</div>
 					<div class="form-group">
-						<label for="weight">Available Quantity</label> 
+						<label for="quantity">Available Quantity</label>
 						<input type="number" class="form-control border border-warning" required name="quantity" min="1" placeholder="Quantity">
 					</div>
 					
