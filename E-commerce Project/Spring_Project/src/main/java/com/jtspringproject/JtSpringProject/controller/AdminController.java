@@ -110,21 +110,20 @@ public class AdminController {
 		
 		Category category =  this.categoryService.addCategory(category_name);
 		if(category.getName().equals(category_name)) {
-			return "redirect:categories";
+			return "redirect:/admin/categories";
 		}else {
-			return "redirect:categories";
+			return "redirect:/admin/categories";
 		}
 	}
-	
-	@GetMapping("categories/delete")
-	public ModelAndView removeCategoryDb(@RequestParam("id") int id)
+
+	@RequestMapping(value = "categories/delete",method = RequestMethod.POST)
+	public String removeCategoryDb(@RequestParam("id") int id)
 	{	
 			this.categoryService.deleteCategory(id);
-			ModelAndView mView = new ModelAndView("forward:/categories");
-			return mView;
+			return "redirect:/admin/categories";
 	}
-	
-	@GetMapping("categories/update")
+
+	@RequestMapping(value = "categories/update",method = RequestMethod.POST)
 	public String updateCategory(@RequestParam("categoryid") int id, @RequestParam("categoryname") String categoryname)
 	{
 		Category category = this.categoryService.updateCategory(id, categoryname);

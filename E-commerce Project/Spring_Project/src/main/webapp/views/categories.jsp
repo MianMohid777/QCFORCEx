@@ -63,7 +63,7 @@
 				<div class="modal-content">
 					<form action="categories" method="post">
 						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLongTitle">Add New
+							<h5 class="modal-title" id="exampleModalLongTitl">Add New
 								Category</h5>
 							<button type="button" class="close" data-dismiss="modal"
 								aria-label="Close">
@@ -104,14 +104,14 @@
 					<td>${category.name }</td>
 
 					<td>
-						<form action="categories/delete" method="get">
+						<form action="categories/delete" method="post">
 							<input type="hidden" name="id" value="${category.id}">
 							<input type="submit" value="Delete" class="btn btn-danger">
 						</form>
 					</td>
 
 					<td>
-						<form action="categories/update" method="get">
+						<form action="categories/update" method="post">
 
 
 

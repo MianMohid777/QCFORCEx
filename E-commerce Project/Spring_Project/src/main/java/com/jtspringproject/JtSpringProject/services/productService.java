@@ -30,7 +30,7 @@ public class productService {
 		return this.productDao.updateProduct(product);
 	}
 	public boolean deleteProduct(int id) {
-		return this.productDao.deletProduct(id);
+		return this.productDao.deleteProduct(id);
 	}
 
 	
