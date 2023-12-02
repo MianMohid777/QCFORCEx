@@ -25,5 +25,8 @@ public class userService {
 		return this.userDao.getUser(username, password);
 	}
 
-	
+
+	public boolean deleteUser(int id) {
+		return this.userDao.deleteUser(id);
+	}
 }

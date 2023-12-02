@@ -3,6 +3,7 @@ package com.jtspringproject.JtSpringProject.dao;
 import java.util.List;
 
 
+import com.jtspringproject.JtSpringProject.models.Product;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -60,4 +61,16 @@ public class userDao {
 		}
     	return null;
     }
+	@Transactional
+	public Boolean deleteUser(int id) {
+
+		Session session = this.sessionFactory.getCurrentSession();
+		Object persistanceInstance = session.load(User.class, id);
+		System.out.println(persistanceInstance.toString());
+		if (persistanceInstance != null) {
+			session.delete(persistanceInstance);
+			return true;
+		}
+		return false;
+	}
 }
