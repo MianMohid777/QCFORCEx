@@ -2,7 +2,6 @@ package com.jtspringproject.JtSpringProject.controller;
 
 import java.sql.*;
 import java.sql.PreparedStatement;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.Cookie;
@@ -105,7 +104,8 @@ public class AdminController {
 		}
 	}
 	@RequestMapping(value = "categories",method = RequestMethod.POST)
-	public String addCategory(@RequestParam("categoryname") String category_name) {
+	public String addCategory(@RequestParam("categoryname") String category_name)
+	{
 		System.out.println(category_name);
 		if (!category_name.trim().isEmpty()) {
 			String cat = category_name.trim();
@@ -119,12 +119,11 @@ public class AdminController {
 		} else {
 			return "redirect:/admin/categories";
 		}
-		return "redirect:/admin/categories";
 	}
 
 	@RequestMapping(value = "categories/delete",method = RequestMethod.POST)
 	public String removeCategoryDb(@RequestParam("id") int id)
-	{
+	{	
 			this.categoryService.deleteCategory(id);
 			return "redirect:/admin/categories";
 	}

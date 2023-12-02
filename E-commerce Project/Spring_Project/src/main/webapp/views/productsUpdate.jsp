@@ -22,8 +22,8 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#"> <img
-					th:src="@{/images/logo.png}" src="../static/images/logo.png"
-					width="auto" height="40" class="d-inline-block align-top" alt="" />
+				th:src="@{/images/logo.png}" src="../static/images/logo.png"
+				width="auto" height="40" class="d-inline-block align-top" alt="" />
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#navbarSupportedContent"
@@ -51,19 +51,19 @@
 				<div class="col-sm-5">
 					
 					<div class="form-group">
-						<label for="id">Id</label>
+						<label >Id</label>
 						<input type="number" readonly="readonly" class="form-control border border-success" name="id"  value="${product.id}">
 						
 
 					</div>
 					<div class="form-group">
-						<label for="name">Name</label>
+						<label>Name</label>
 						<input type="text" class="form-control border border-success" required name="name" value="${product.name }" placeholder="Enter name">
 					</div>
 					
 					<div class="form-group">
-					
-						<label for="category">Select Category</label>
+
+						<label >Select Category</label>
 						<select class="form-control border border-success" name="categoryid" readonly>
 							<option selected>Select a Category</option>
                             							<c:forEach var="category" items="${categories}">
@@ -72,15 +72,15 @@
 						</select>
 					</div>
 					<div class="form-group">
-						<label for="price">Price</label>
+						<label >Price</label>
 						<input type="number" class="form-control border border-success" required name="price" value="${ product.price }" min="1" placeholder="Price">
 					</div>
 					<div class="form-group">
-						<label for="weight">Weight in grams</label> 
+						<label >Weight in grams</label>
 						<input type="number" class="form-control border border-success" required name="weight" value="${product.weight }" min="1" placeholder="Weight">
 					</div>
 					<div class="form-group">
-						<label for="quantity">Available Quantity</label>
+						<label >Available Quantity</label>
 						<input type="number" class="form-control border border-success" required name="quantity" value="${ product.quantity }" min="1" placeholder="Quantity">
 					</div>
 					
@@ -89,10 +89,10 @@
 				
 				<div class="col-sm-5">
 				<div class="form-group">
-						<label for="description">Product Description</label>
-						<textarea class="form-control border border-success" rows="4" name="description" placeholder="Product Details" value= "${ product.description }"></textarea>
+						<label >Product Description</label>
+						<textarea class="form-control border border-success" rows="4" name="product.description" placeholder="Product Details" value= "${ pdescription }"></textarea>
 					</div>
-					<label for="Image">Product Image</label>
+					<p>Product Image</p>
 					<div class="custom-file">
 						<input type="file" class="custom-file-input" name="productImage" value="${ product.image }" accept="image/jpeg, image/png" id="productImage"  onchange="loadfile(event)"/>
 						<label class="custom-file-label border border-success" for="productImage">Choose file</label>
@@ -113,6 +113,7 @@
 			</div>
 		</form>
 	</div>
+	</c:forEach>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
