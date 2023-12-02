@@ -172,7 +172,6 @@ public class AdminController {
 		System.out.println(categoryId);
 		Category category = this.categoryService.getCategory(categoryId);
 		Product product = new Product();
-		product.setId(categoryId);
 		product.setName(name);
 		product.setCategory(category);
 		product.setDescription(description);
@@ -201,7 +200,7 @@ public class AdminController {
 	{
 		Category category = this.categoryService.getCategory(categoryId);
 		Product product = new Product();
-		product.setId(categoryId);
+		product.setId(id);
 		product.setName(name);
 		product.setCategory(category);
 		product.setDescription(description);
