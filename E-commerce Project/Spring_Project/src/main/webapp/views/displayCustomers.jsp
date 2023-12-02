@@ -78,7 +78,11 @@
 				
 			</tbody>
 		</table>
-		
+			<table class="table">
+			</table>
+		<div class="text-center mt-4">
+			<a href="/admin/addCustomer" class="btn btn-primary">Add Customer</a>
+		</div>
 	</div>
 
 
