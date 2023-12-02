@@ -71,6 +71,12 @@
 					    ${customer.address}
 						
 				    </td>
+					<td>
+						<form action="displayCustomers/delete" method="get">
+							<input type="hidden" name="id" value="${customer.id}">
+							<input type="submit" value="Delete" class="btn btn-danger">
+						</form>
+					</td>
 					</tr>
                 </c:forEach>
 
@@ -78,11 +84,6 @@
 				
 			</tbody>
 		</table>
-			<table class="table">
-			</table>
-		<div class="text-center mt-4">
-			<a href="/admin/addCustomer" class="btn btn-primary">Add Customer</a>
-		</div>
 	</div>
 
 

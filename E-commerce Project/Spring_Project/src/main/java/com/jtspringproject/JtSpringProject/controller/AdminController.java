@@ -340,4 +340,11 @@ public class AdminController {
 		return "redirect:/index";
 	}
 
+	@GetMapping("displayCustomers/delete")
+	public String removeCustomer(@RequestParam("id") int id)
+	{
+		this.userService.deleteUser(id);
+		return "redirect:/admin/customers";
+	}
+
 }
