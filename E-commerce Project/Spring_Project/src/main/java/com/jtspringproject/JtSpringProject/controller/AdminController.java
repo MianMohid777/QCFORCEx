@@ -119,6 +119,7 @@ public class AdminController {
 		} else {
 			return "redirect:/admin/categories";
 		}
+		return "redirect:/admin/categories";
 	}
 
 	@RequestMapping(value = "categories/delete",method = RequestMethod.POST)
