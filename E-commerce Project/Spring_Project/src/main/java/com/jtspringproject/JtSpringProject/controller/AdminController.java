@@ -31,14 +31,55 @@ public class AdminController {
 	
 	@Autowired
 	private userService userService;
+
+	public com.jtspringproject.JtSpringProject.services.userService getUserService() {
+		return userService;
+	}
+
+	public void setUserService(com.jtspringproject.JtSpringProject.services.userService userService) {
+		this.userService = userService;
+	}
+
+	public com.jtspringproject.JtSpringProject.services.categoryService getCategoryService() {
+		return categoryService;
+	}
+
+	public void setCategoryService(com.jtspringproject.JtSpringProject.services.categoryService categoryService) {
+		this.categoryService = categoryService;
+	}
+
+	public com.jtspringproject.JtSpringProject.services.productService getProductService() {
+		return productService;
+	}
+
+	public void setProductService(com.jtspringproject.JtSpringProject.services.productService productService) {
+		this.productService = productService;
+	}
+
+	public int getAdminlogcheck() {
+		return adminlogcheck;
+	}
+
+	public void setAdminlogcheck(int adminlogcheck) {
+		this.adminlogcheck = adminlogcheck;
+	}
+
+	public String getUsernameforclass() {
+		return usernameforclass;
+	}
+
+	public void setUsernameforclass(String usernameforclass) {
+		this.usernameforclass = usernameforclass;
+	}
+
 	@Autowired
 	private categoryService categoryService;
 	
 	@Autowired
 	private productService productService;
 	
-	int adminlogcheck = 0;
-	String usernameforclass = "";
+	public int adminlogcheck = 0;
+	public String usernameforclass = "";
 	@RequestMapping(value = {"return"})
 	public String returnIndex() {
 		adminlogcheck =0;
