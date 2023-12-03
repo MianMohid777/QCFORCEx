@@ -160,7 +160,6 @@ public class AdminController {
 		}
 		return "redirect:/admin/categories";
 	}
-
 	@RequestMapping(value = "categories/delete",method = RequestMethod.POST)
 	public String removeCategoryDb(@RequestParam("id") int id)
 	{	
