@@ -29,4 +29,8 @@ public class userService {
 	public boolean deleteUser(int id) {
 		return this.userDao.deleteUser(id);
 	}
+
+	public User updateUser(User user) {
+		return this.userDao.updateUser(user);
+	}
 }

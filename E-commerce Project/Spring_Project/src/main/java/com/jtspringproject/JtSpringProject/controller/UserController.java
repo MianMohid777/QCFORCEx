@@ -20,7 +20,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.jtspringproject.JtSpringProject.services.userService;
 import com.jtspringproject.JtSpringProject.services.productService;
-import com.jtspringproject.JtSpringProject.services.cartService;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 
@@ -138,46 +137,6 @@ public class UserController{
 		
 		return "redirect:/";
 	}
-	
-	
-	
-	   //for Learning purpose of model
-		@GetMapping("/test")
-		public String Test(Model model)
-		{
-			System.out.println("test page");
-			model.addAttribute("author","jay gajera");
-			model.addAttribute("id",40);
-			
-			List<String> friends = new ArrayList<String>();
-			model.addAttribute("f",friends);
-			friends.add("xyz");
-			friends.add("abc");
-			
-			return "test";
-		}
-		
-		// for learning purpose of model and view ( how data is pass to view)
-		
-		@GetMapping("/test2")
-		public ModelAndView Test2()
-		{
-			System.out.println("test page");
-			//create modelandview object
-			ModelAndView mv=new ModelAndView();
-			mv.addObject("name","jay gajera 17");
-			mv.addObject("id",40);
-			mv.setViewName("test2");
-			
-			List<Integer> list=new ArrayList<Integer>();
-			list.add(10);
-			list.add(25);
-			mv.addObject("marks",list);
-			return mv;
-			
-			
-		}
-
 
 	@GetMapping("carts")
 	public ModelAndView  getCartDetail()
@@ -194,5 +153,64 @@ public class UserController{
 	{
 		;
 	}
-	  
+
+	@GetMapping("/user/profile")
+	public String updateProfile(Model model)
+	{
+		return "updateProfile";
+	}
+
+	@RequestMapping(value = "/user/updateuser", method = RequestMethod.POST)
+	public String updateProfile(@RequestParam("userid") String userid,@RequestParam("username") String username, @RequestParam("password") String pass,@RequestParam("email") String email,@RequestParam("address") String address )
+	{
+		User user = new User();
+		user.setId(Integer.parseInt(userid));
+		user.setUsername(username);
+		user.setEmail(email);
+		user.setAddress(address);
+		user.setRole("ROLE_NORMAL");
+
+
+		if(!username.trim().isEmpty())
+		{this.userService.updateUser(user);}
+		return "redirect:/index";
+	}
+	//for Learning purpose of model
+	@GetMapping("/test")
+	public String Test(Model model)
+	{
+		System.out.println("test page");
+		model.addAttribute("author","jay gajera");
+		model.addAttribute("id",40);
+
+		List<String> friends = new ArrayList<String>();
+		model.addAttribute("f",friends);
+		friends.add("xyz");
+		friends.add("abc");
+
+		return "test";
+	}
+
+	// for learning purpose of model and view ( how data is pass to view)
+
+	@GetMapping("/test2")
+	public ModelAndView Test2()
+	{
+		System.out.println("test page");
+		//create modelandview object
+		ModelAndView mv=new ModelAndView();
+		mv.addObject("name","jay gajera 17");
+		mv.addObject("id",40);
+		mv.setViewName("test2");
+
+		List<Integer> list=new ArrayList<Integer>();
+		list.add(10);
+		list.add(25);
+		mv.addObject("marks",list);
+		return mv;
+
+
+	}
+
+
 }

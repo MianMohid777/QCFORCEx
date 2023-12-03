@@ -200,7 +200,7 @@ public class AdminController {
 	{
 		Category category = this.categoryService.getCategory(categoryId);
 		Product product = new Product();
-		product.setId(id);
+		//product.setId(id);
 		product.setName(name);
 		product.setCategory(category);
 		product.setDescription(description);

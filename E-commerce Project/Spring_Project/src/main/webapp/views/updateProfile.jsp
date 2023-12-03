@@ -1,4 +1,4 @@
-3<!doctype html>
+<!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
@@ -18,11 +18,11 @@
     <div class="col-sm-6">
         <h3 style="margin-top: 10px">User Profile</h3>
         <br>
-        <form action="updateuser" method="post">
+        <form action="/user/updateuser" method="post">
             <div class="form-group">
-                <label for="firstName">User Name</label>
-                <input type="hidden" name="userid" value="${userid }">
-                <input type="text" name="username" id="firstName" required placeholder="Your Username*" value="${username }" required class="form-control form-control-lg">
+                <label for="username">User Name</label>
+                <input type="hidden" name="userid" value="${id}">
+                <input type="text" name="username" id="username" required placeholder="Your Username*" value="${username }" required class="form-control form-control-lg">
             </div>
             <div class="form-group">
                 <label for="email">Email address</label>
