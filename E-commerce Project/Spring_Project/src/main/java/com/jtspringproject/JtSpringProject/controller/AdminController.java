@@ -115,11 +115,9 @@ public class AdminController {
 	}
 	@RequestMapping(value = "admin/loginvalidate", method = RequestMethod.POST)
 	public ModelAndView adminlogin( @RequestParam("username") String username, @RequestParam("password") String pass,RedirectAttributes redirectAttributes) {
-		
 		User user=this.userService.checkLogin(username, pass);
 
 		if (user == null) {
-
 			redirectAttributes.addFlashAttribute("error","Incorrect ! Username or Password");
 			return new ModelAndView("redirect:/admin/login");
 
@@ -152,10 +150,10 @@ public class AdminController {
 			String cat = category_name.trim();
 
 			Category category = this.categoryService.addCategory(cat);
-
+			//category.setName(cat);
+			System.out.println(category.getName());
 			if (category.getName().equals(category_name)) {
 				return "redirect:/admin/categories";
-
 			}
 		} else {
 			return "redirect:/admin/categories";
