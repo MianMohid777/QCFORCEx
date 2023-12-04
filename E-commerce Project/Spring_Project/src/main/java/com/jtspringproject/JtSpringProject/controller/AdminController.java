@@ -78,7 +78,7 @@ public class AdminController {
 	@Autowired
 	private productService productService;
 	
-	public int adminlogcheck = 0;
+	public static int adminlogcheck = 0;
 	public String usernameforclass = "";
 	@RequestMapping(value = {"return"})
 	public String returnIndex() {
@@ -210,14 +210,17 @@ public class AdminController {
 		System.out.println(categoryId);
 		Category category = this.categoryService.getCategory(categoryId);
 		Product product = new Product();
-		product.setName(name);
-		product.setCategory(category);
-		product.setDescription(description);
-		product.setPrice(price);
-		product.setImage(productImage);
-		product.setWeight(weight);
-		product.setQuantity(quantity);
-		this.productService.addProduct(product);
+
+		if(!name.trim().isEmpty() && category != null && price > 0 && quantity > 0) {
+			product.setName(name);
+			product.setCategory(category);
+			product.setDescription(description);
+			product.setPrice(price);
+			product.setImage(productImage);
+			product.setWeight(weight);
+			product.setQuantity(quantity);
+			this.productService.addProduct(product);
+		}
 		return "redirect:/admin/products";
 	}
 
@@ -238,7 +241,6 @@ public class AdminController {
 	{
 		Category category = this.categoryService.getCategory(categoryId);
 		Product product = new Product();
-		//product.setId(id);
 		product.setName(name);
 		product.setCategory(category);
 		product.setDescription(description);
@@ -278,69 +280,45 @@ public class AdminController {
 	
 	
 	@GetMapping("profileDisplay")
-	public String profileDisplay(Model model) {
-		String displayusername,displaypassword,displayemail,displayaddress;
-		try
-		{
-			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecommjava","root","patanahi");
-			PreparedStatement stmt = con.prepareStatement("select * from users where username = ?"+";");
-			stmt.setString(1, usernameforclass);
+	public String profileDisplay(@RequestParam("id") int id,Model model) {
 
-			if(stmt.execute()) {
-				ResultSet rst = stmt.getResultSet();
 
-				if (rst.next()) {
-					int userid = rst.getInt(1);
-					displayusername = rst.getString(2);
-					displayemail = rst.getString(3);
-					displaypassword = rst.getString(4);
-					displayaddress = rst.getString(5);
-					model.addAttribute("userid", userid);
-					model.addAttribute("username", displayusername);
-					model.addAttribute("email", displayemail);
-					model.addAttribute("password", displaypassword);
-					model.addAttribute("address", displayaddress);
-				}
-			}
-		}
-		catch(Exception e)
+		User u = userService.findUserById(id);
+
+		if(u != null)
 		{
-			System.out.println("Exception:"+e);
+			model.addAttribute("user",u);
+			return "updateProfile";
 		}
-		System.out.println("Hello");
-		return "updateProfile";
+		else
+			return "displayCustomers";
+
+
 	}
 	
-	@RequestMapping(value = "updateuser",method=RequestMethod.POST)
-	public String updateUserProfile(@RequestParam("userid") int userid,@RequestParam("username") String username, @RequestParam("email") String email, @RequestParam("password") String password, @RequestParam("address") String address) 
-	
+	@RequestMapping(value = "user/updateuser",method=RequestMethod.POST)
+	public String updateUserProfile(@RequestParam("id") int id,@RequestParam("username") String username, @RequestParam("email") String email, @RequestParam("password") String password, @RequestParam("address") String address)
 	{
-		try
-		{
-			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecommjava","root","");
-			
-			PreparedStatement pst = con.prepareStatement("update users set username= ?,email = ?,password= ?, address= ? where uid = ?;");
-			pst.setString(1, username);
-			pst.setString(2, email);
-			pst.setString(3, password);
-			pst.setString(4, address);
-			pst.setInt(5, userid);
-			int i = pst.executeUpdate();	
-			usernameforclass = username;
+
+		User u = userService.findUserById(id);
+
+		if(u != null) {
+			u.setUsername(username);
+			u.setPassword(password);
+			u.setEmail(email);
+			u.setAddress(address);
+
+			userService.updateUser(u);
 		}
-		catch(Exception e)
-		{
-			System.out.println("Exception:"+e);
-		}
-		return "redirect:/index";
+
+		return "adminHome";
 	}
 
 	@GetMapping("displayCustomers/delete")
 	public String removeCustomer(@RequestParam("id") int id)
 	{
-		this.userService.deleteUser(id);
+		if(!userService.findUserById(id).getRole().equalsIgnoreCase("ROLE_ADMIN"))
+		   this.userService.deleteUser(id);
 		return "redirect:/admin/customers";
 	}
 

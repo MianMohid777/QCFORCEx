@@ -1,3 +1,4 @@
+<%@ page import="com.jtspringproject.JtSpringProject.models.User" %>
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -19,26 +20,29 @@
         <h3 style="margin-top: 10px">User Profile</h3>
         <br>
         <form action="/user/updateuser" method="post">
+
+            <% User user = (User) request.getAttribute("user");%>
+
+            <input type="hidden" name="id" id="id" value="<%=user.getId()%>">
+
             <div class="form-group">
                 <label for="username">User Name</label>
-                <input type="hidden" name="userid" value="${id}">
-                <input type="text" name="username" id="username" required placeholder="Your Username*" value="${username }" required class="form-control form-control-lg">
+                <input type="text" name="username" id="username" required placeholder="Your Username*" value="<%=user.getUsername()%>" required class="form-control form-control-lg">
             </div>
             <div class="form-group">
                 <label for="email">Email address</label>
-                <input type="email" class="form-control form-control-lg" required minlength="6" placeholder="Email*" value="${email }" required name="email" id="email"
+                <input type="email" class="form-control form-control-lg" required minlength="6" placeholder="Email*" value="<%=user.getEmail()%>" required name="email" id="email"
                        aria-describedby="emailHelp">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with
                     anyone else.</small>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" class="form-control form-control-lg" required placeholder="Password*" value="${password }" required name="password"
-                       id="password">
+                <input type="password" class="form-control form-control-lg" required placeholder="Password*" value="<%=user.getPassword()%>" required name="password" id="password">
             </div>
             <div class="form-group">
                 <%--@declare id="address"--%><label for="Address">Address</label>
-                <textarea class="form-control form-control-lg" rows="3" placeholder="Enter Your Address" name="address">${address }</textarea>
+                <textarea class="form-control form-control-lg" rows="3" placeholder="Enter Your Address" name="address"><%=user.getAddress()%></textarea>
             </div>
 
             <input type="submit" value="Update Profile" class="btn btn-primary btn-block"><br>

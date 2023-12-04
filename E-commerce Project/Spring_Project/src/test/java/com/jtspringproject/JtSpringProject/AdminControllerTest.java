@@ -51,7 +51,8 @@ class AdminControllerTest {
         adminController.setCategoryService(categoryService);
         adminController.setProductService(productService);
         productDaoMock= Mockito.mock(productDao.class);
-        productService.setProductDao(productDaoMock);
+        //productService.setProductDao(productDaoMock);
+
     }
     @Test
     void returnIndex() {
@@ -377,7 +378,7 @@ class AdminControllerTest {
 
             // Mock your JDBC driver loading and connection creation here
 
-            adminController.profileDisplay(model);
+            adminController.profileDisplay(1,model);
 
             // Verify that the model attributes were added
             verify(model).addAttribute("userid", 1);

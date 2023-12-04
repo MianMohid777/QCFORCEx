@@ -78,4 +78,25 @@ public class userDao {
 		this.sessionFactory.getCurrentSession().update(String.valueOf(User.class),user);
 		return user;
 	}
+
+	@Transactional
+	public User getUserById(Integer id) {
+		Query query = sessionFactory.getCurrentSession().createQuery("from CUSTOMER where id = :id");
+		query.setParameter("id",id);
+
+		try {
+			User user = (User)query.uniqueResult();
+
+			if(user != null) {
+				return user;
+			}
+			else {
+				return null;
+			}
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+			User user = new User();
+			return user;
+		}
+	}
 }

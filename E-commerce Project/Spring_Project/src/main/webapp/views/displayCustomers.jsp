@@ -71,12 +71,15 @@
 					    ${customer.address}
 						
 				    </td>
+
+
 					<td>
-						<form action="displayCustomers/delete" method="get">
-							<input type="hidden" name="id" value="${customer.id}">
-							<input type="submit" value="Delete" class="btn btn-danger">
-						</form>
+						<a href="profileDisplay?id=${customer.id}" class="btn btn-primary">Update</a>
+						<a href="displayCustomers/delete?id=${customer.id}" class="btn btn-danger">Delete</a>
 					</td>
+
+
+
 					</tr>
                 </c:forEach>
 

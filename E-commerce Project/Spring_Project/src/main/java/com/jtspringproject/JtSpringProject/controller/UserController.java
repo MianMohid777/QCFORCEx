@@ -161,19 +161,23 @@ public class UserController{
 	}
 
 	@RequestMapping(value = "/user/updateuser", method = RequestMethod.POST)
-	public String updateProfile(@RequestParam("userid") String userid,@RequestParam("username") String username, @RequestParam("password") String pass,@RequestParam("email") String email,@RequestParam("address") String address )
+	public String updateProfile(@RequestParam("id") int id,@RequestParam("username") String username, @RequestParam("password") String password,@RequestParam("email") String email,@RequestParam("address") String address )
 	{
-		User user = new User();
-		user.setId(Integer.parseInt(userid));
-		user.setUsername(username);
-		user.setEmail(email);
-		user.setAddress(address);
-		user.setRole("ROLE_NORMAL");
+		User u = userService.findUserById(id);
 
+		if(u != null) {
+			u.setUsername(username.trim());
+			u.setPassword(password);
+			u.setEmail(email);
+			u.setAddress(address);
 
-		if(!username.trim().isEmpty())
-		{this.userService.updateUser(user);}
-		return "redirect:/index";
+			userService.updateUser(u);
+		}
+
+		if(AdminController.adminlogcheck ==1)
+		  return "adminHome";
+		else
+			return "redirect:/";
 	}
 	//for Learning purpose of model
 	@GetMapping("/test")

@@ -33,4 +33,9 @@ public class userService {
 	public User updateUser(User user) {
 		return this.userDao.updateUser(user);
 	}
+
+	public User findUserById(int id)
+	{
+		return userDao.getUserById(id);
+	}
 }

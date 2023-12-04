@@ -93,20 +93,17 @@
 						<textarea class="form-control border border-success" rows="4" required name="description" placeholder="Product Details" value= "${ product.description }"></textarea>
 					</div>
 					<p>Product Image</p>
-					<div class="custom-file">
-						<input type="file" class="custom-file-input" name="productImage" value="${ product.image }" accept="image/jpeg, image/png" id="productImage"  onchange="loadfile(event)"/>
-						<label class="custom-file-label border border-success" for="productImage">Choose file</label>
-						<script type="text/javascript">
-						var loadFile = function(event) {
-							var image = document.getElementById('imgPreview');
-							image.src = URL.createObjectURL(event.target.files[0]);
-						};
-						</script>
+					<div class="form-group">
+						<label for="image">Image Link</label>
+						<input type="text" class="form-control border border-warning" required name="productImage" placeholder="Enter Short Image Link">
+
+
 					</div>
 					<div class="form-group">
-						<img src="#" id="imgPreview" height="100px" width="100px"
-							style="margin-top: 20px" alt=" ">
+						<img src="Product Images/one.jpg" alt="Hello" id="imgPreview" height="100px" width="100px"
+							 style="margin-top: 20px" >
 					</div>
+					<input type="hidden" name="imgName">
 					<input type="hidden" name="imgName">
 					<input type="submit" value="Update Details" class="btn btn-primary">
 				</div>
