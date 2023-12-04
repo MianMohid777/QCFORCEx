@@ -288,7 +288,7 @@ public class AdminController {
 		if(u != null)
 		{
 			model.addAttribute("user",u);
-			return "updateProfile";
+			return "updateProfileByAdmin";
 		}
 		else
 			return "displayCustomers";
@@ -296,7 +296,7 @@ public class AdminController {
 
 	}
 	
-	@RequestMapping(value = "user/updateuser",method=RequestMethod.POST)
+	@RequestMapping(value = "updateuser",method=RequestMethod.POST)
 	public String updateUserProfile(@RequestParam("id") int id,@RequestParam("username") String username, @RequestParam("email") String email, @RequestParam("password") String password, @RequestParam("address") String address)
 	{
 

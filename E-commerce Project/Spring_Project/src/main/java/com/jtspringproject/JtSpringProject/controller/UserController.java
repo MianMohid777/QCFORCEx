@@ -35,6 +35,8 @@ public class UserController{
 	@Autowired
 	private cartService cartService;
 
+	private User user;
+
 	@Autowired
 	public UserController(userService userService, productService productService, cartService cartService) {
 		this.userService = userService;
@@ -80,6 +82,8 @@ public class UserController{
 
 			System.out.println("Username = " + u.getUsername());
 			if (u.getUsername().equalsIgnoreCase(username.trim())) {
+
+				user = u;
 
 				res.addCookie(new Cookie("username", u.getUsername()));
 				ModelAndView mView = new ModelAndView("index");
@@ -157,27 +161,35 @@ public class UserController{
 	@GetMapping("/user/profile")
 	public String updateProfile(Model model)
 	{
+		model.addAttribute("user",user);
+
 		return "updateProfile";
 	}
 
 	@RequestMapping(value = "/user/updateuser", method = RequestMethod.POST)
-	public String updateProfile(@RequestParam("id") int id,@RequestParam("username") String username, @RequestParam("password") String password,@RequestParam("email") String email,@RequestParam("address") String address )
+	public String updateProfile(@RequestParam("id") int id,@RequestParam("username") String username, @RequestParam("password") String password,@RequestParam("email") String email,@RequestParam("address") String address,Model model)
 	{
-		User u = userService.findUserById(id);
 
-		if(u != null) {
-			u.setUsername(username.trim());
-			u.setPassword(password);
-			u.setEmail(email);
-			u.setAddress(address);
+		if(user != null) {
+			user.setUsername(username.trim());
+			user.setPassword(password);
+			user.setEmail(email);
+			user.setAddress(address);
 
-			userService.updateUser(u);
+			userService.updateUser(user);
+
+			model.addAttribute("user", user);
+
+			List<Product> products = this.productService.getProducts();
+
+			if (products.isEmpty()) {
+				model.addAttribute("msg", "No products are available");
+			} else {
+				model.addAttribute("products", products);
+			}
 		}
 
-		if(AdminController.adminlogcheck ==1)
-		  return "adminHome";
-		else
-			return "redirect:/";
+		return "index";
 	}
 	//for Learning purpose of model
 	@GetMapping("/test")
