@@ -33,5 +33,8 @@ public class productService {
 		return this.productDao.deleteProduct(id);
 	}
 
-	
+
+    public void setProductDao(com.jtspringproject.JtSpringProject.dao.productDao productDaoMock) {
+		this.productDao = productDaoMock;
+    }
 }
