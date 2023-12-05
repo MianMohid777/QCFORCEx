@@ -22,7 +22,7 @@
 <body class="bg-light">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#"> <img
+			<a class="navbar-brand" href="/admin/Dashboard"> <img
 				th:src="@{/images/logo.png}" src="../static/images/logo.png"
 				width="auto" height="40" class="d-inline-block align-top" alt="" />
 			</a>
@@ -38,7 +38,7 @@
 				<ul class="navbar-nav">
 					<li class="nav-item active"><a class="nav-link" href="/admin/Dashboard">Home
 						Page</a></li>
-					<li class="nav-item active"><a class="nav-link" href="/admin/login">Logout</a></li>
+					<li class="nav-item active"><a class="nav-link" href="/">Logout</a></li>
 
 
 				</ul>

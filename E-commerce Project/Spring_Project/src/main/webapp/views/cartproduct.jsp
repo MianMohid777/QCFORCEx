@@ -20,7 +20,7 @@
 <body class="bg-light">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#"> <img
+			<a class="navbar-brand" href=""> <img
 				src="static/images/logo.png"
 				width="auto" height="40" class="d-inline-block align-top" alt="" />
 			</a>
@@ -34,7 +34,7 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto"></ul>
 				<ul class="navbar-nav">
-					<li class="nav-item active"><a class="nav-link" href="/adminhome">Home
+					<li class="nav-item active"><a class="nav-link" href="index">Home
 							Page</a></li>
 					<li class="nav-item active"><a class="nav-link" href="/">Logout</a>
 					</li>
