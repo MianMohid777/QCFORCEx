@@ -51,7 +51,7 @@ class AdminControllerTest {
         adminController.setCategoryService(categoryService);
         adminController.setProductService(productService);
         productDaoMock= Mockito.mock(productDao.class);
-        //productService.setProductDao(productDaoMock);
+        productService.setProductDao(productDaoMock);
 
     }
     @Test
