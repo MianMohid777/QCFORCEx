@@ -87,7 +87,7 @@
 					<td>
 						${product.quantity }
 					</td>
-					<td>S
+					<td>
 						${product.price }
 					</td>
 					<td>

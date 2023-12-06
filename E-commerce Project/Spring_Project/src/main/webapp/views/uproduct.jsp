@@ -34,7 +34,7 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto"></ul>
 				<ul class="navbar-nav">
-					<li class="nav-item active"><a class="nav-link" href="index">Home
+					<li class="nav-item active"><a class="nav-link" href="/index">Home
 							Page</a></li>
 					<li class="nav-item active"><a class="nav-link" href="/">Logout</a>
 					</li>
@@ -99,6 +99,7 @@
 
 				    <form action="/cartAdd" method="post">
 							<input type="hidden" name="id" value="${product.id}">
+
 							<input type="submit" value="Add To Cart" class="btn btn-warning">
 					</form>
 					</td>

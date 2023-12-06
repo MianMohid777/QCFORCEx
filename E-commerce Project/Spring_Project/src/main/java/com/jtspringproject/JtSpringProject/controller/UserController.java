@@ -61,6 +61,21 @@ public class UserController{
 	}
 	
 
+	@GetMapping(value = "/index")
+	public String home(Model model)
+	{
+		model.addAttribute("user",user);
+
+		List<Product> products = this.productService.getProducts();
+
+		if (products.isEmpty()) {
+			model.addAttribute("msg", "No products are available");
+		} else {
+			model.addAttribute("products", products);
+		}
+		return "index";
+
+	}
 	@GetMapping("/")
 	public String userlogin(Model model) {
 
@@ -152,6 +167,7 @@ public class UserController{
 
 		List<Cart> carts = cartService.getCarts();
 
+
 		if(cart == null)
 			cart = new Cart();
 		cart.setCustomer(user);
@@ -179,6 +195,9 @@ public class UserController{
 
 		//System.out.println(cart.getId());
 
+		if(cart.getCustomer() == null)
+			cart.setCustomer(user);
+
 		if(cart.getProducts().isEmpty()) {
 			cart.addProduct(p);
 			cartService.addCart(cart);
@@ -199,7 +218,7 @@ public class UserController{
 
 		if(!cart.getProducts().isEmpty()) {
 			cart.removeProduct(p);
-			cartService.deleteCart(cart);
+			cartService.updateCart(cart);
 		}
 
 		return "redirect:/carts?id=" + cart.getId();
@@ -236,7 +255,7 @@ public class UserController{
 			}
 		}
 
-		return "index";
+		return "redirect:/index";
 	}
 	//for Learning purpose of model
 	@GetMapping("/test")
