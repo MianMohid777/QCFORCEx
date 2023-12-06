@@ -60,7 +60,7 @@
                     <ul class="navbar-nav mr-auto"></ul>
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="/carts" >CART</a>
+                            <a class="nav-link" href="/carts?id=${user.id}" >CART</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href = "/user/profile">Profile</a>

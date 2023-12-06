@@ -35,13 +35,15 @@ public class UserController{
 	@Autowired
 	private cartService cartService;
 
-	private User user;
+	private  static User user;
+	private  static Cart cart;
 
 	@Autowired
 	public UserController(userService userService, productService productService, cartService cartService) {
 		this.userService = userService;
 		this.productService = productService;
 		this.cartService = cartService;
+		this.cart = new Cart();
 	}
 
 	@GetMapping("/register")
@@ -62,6 +64,8 @@ public class UserController{
 	@GetMapping("/")
 	public String userlogin(Model model) {
 
+		cart = null;
+		user = null;
 		model.addAttribute("message","Tested By Quality Control Force");
 		model.addAttribute("errorMsg", "Please enter correct email and password");
 
@@ -143,19 +147,62 @@ public class UserController{
 	}
 
 	@GetMapping("carts")
-	public ModelAndView  getCartDetail()
+	public String getCartDetail(Model model,@RequestParam("id") int id)
 	{
-		ModelAndView mv= new ModelAndView("cartproduct");
-		List<Cart> carts = cartService.getCarts();
-		mv.addObject("carts",carts);
 
-		return mv;
+		List<Cart> carts = cartService.getCarts();
+
+		if(cart == null)
+			cart = new Cart();
+		cart.setCustomer(user);
+
+		for(Cart c : carts)
+		{
+			if(c.getCustomer().getId() == id)
+			{
+				cart = c;
+				model.addAttribute("cart",cart);
+				return "cartproduct";
+			}
+		}
+
+		model.addAttribute("cart",cart);
+
+		return "cartproduct";
+
     }
 
 	@PostMapping("cartAdd")
-	public void addToCart()
+	public String addToCart(@RequestParam("id") int id)
 	{
-		;
+		Product p = productService.getProduct(id);
+
+		//System.out.println(cart.getId());
+
+		if(cart.getProducts().isEmpty()) {
+			cart.addProduct(p);
+			cartService.addCart(cart);
+		}
+		else {
+			cart.addProduct(p);
+			cartService.updateCart(cart);
+		}
+
+
+		return "redirect:/carts?id=" + cart.getId();
+	}
+
+	@PostMapping("delete")
+	public String deleteFromCart(@RequestParam("id") int id)
+	{
+		Product p = productService.getProduct(id);
+
+		if(!cart.getProducts().isEmpty()) {
+			cart.removeProduct(p);
+			cartService.deleteCart(cart);
+		}
+
+		return "redirect:/carts?id=" + cart.getId();
 	}
 
 	@GetMapping("/user/profile")

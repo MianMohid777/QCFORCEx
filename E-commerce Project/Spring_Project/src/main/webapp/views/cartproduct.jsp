@@ -1,8 +1,10 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="java.sql.*"%>
 <%@page import="java.util.*"%>
 <%@page import="java.text.*"%>
 <%@page import ="java.io.FileOutputStream" %>    
-<%@page import=" java.io.ObjectOutputStream" %>    
+<%@page import=" java.io.ObjectOutputStream" %>
+<%@ page import="com.jtspringproject.JtSpringProject.models.Cart" %>
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -46,8 +48,9 @@
 	</nav><br>
 	<div class="container-fluid">
 
-		<a style="margin: 20px 0" class="btn btn-primary"
-			href="/user/products">Add Product</a><br>
+		<jsp:useBean id="cart" scope="request" type="com.jtspringproject.JtSpringProject.models.Cart"/>
+
+		<a style="margin: 20px 0" class="btn btn-primary" href="/user/products">Add Product</a><br>
 		<table class="table">
 
 			<tr>
@@ -59,57 +62,27 @@
 				
 			</tr>
 			<tbody>
+
+
+			<c:forEach var="product" items="${cart.products}">
 				<tr>
-
-					<%
-					try {
-						String url = "jdbc:mysql://localhost:3306/ecommjava";
-						Class.forName("com.mysql.cj.jdbc.Driver");
-						Connection con = DriverManager.getConnection(url, "root", "Mohid123");
-						Statement stmt = con.createStatement();
-						Statement stmt2 = con.createStatement();
-						ResultSet rs = stmt.executeQuery("select * from cart");
-					%>
-					<%
-					while (rs.next()) {
-					%>
+					<td>${product.id}</td>
+					<td>${product.name}</td>
+					<td>${product.price}</td>
+					<td>${product.description}</td>
 					<td>
-						<%= rs.getInt(1) %>
-					</td>
-					<td>
-						<%= rs.getString(2) %>
-					</td>
-					<td>
-						<%= rs.getString(3) %>
-						
-					</td>
-					<td>
-						<%= rs.getString(4) %>
-						
-					</td>
-					
-					
-
-					<td>
-					<form action="cart/delete" method="get">
-							<input type="hidden" name="id" value="<%=rs.getInt(1)%>">
+						<form action="/delete" method="post">
+							<input type="hidden" name="id" value="${product.id}">
 							<input type="submit" value="Delete" class="btn btn-danger">
-					</form>
+						</form>
 					</td>
-					
-
 				</tr>
-				<%
-				}
-				%>
+			</c:forEach>
 
 			</tbody>
+
 		</table>
-		<%
-		} catch (Exception ex) {
-		out.println("Exception Occurred:: " + ex.getMessage());
-		}
-		%>
+
 	</div>
 
 

@@ -1,6 +1,6 @@
 package com.jtspringproject.JtSpringProject.services;
 
-import com.jtspringproject.JtSpringProject.dao.cartDao;
+import com.jtspringproject.JtSpringProject.dao.CartDao;
 import com.jtspringproject.JtSpringProject.models.Cart;
 import com.jtspringproject.JtSpringProject.models.Category;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class cartService {
     @Autowired
-    private cartDao cartDao;
+    private CartDao cartDao;
 
     public Cart addCart(Cart cart)
     {

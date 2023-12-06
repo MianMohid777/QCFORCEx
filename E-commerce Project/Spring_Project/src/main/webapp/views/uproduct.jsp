@@ -97,7 +97,7 @@
 
 					<td>
 
-				    <form action="products/cartload" method="get">
+				    <form action="/cartAdd" method="post">
 							<input type="hidden" name="id" value="${product.id}">
 							<input type="submit" value="Add To Cart" class="btn btn-warning">
 					</form>
