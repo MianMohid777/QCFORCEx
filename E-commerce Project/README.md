@@ -8,6 +8,16 @@
 - add more functions and remove logical errors
 - changes related to end points and connections
 - a detailed report is written in readmeByTEAM.docx
+
+## HOW CAN YOU RUN TEST CASES
+- make sure jdk is set in the environment variable of your pc
+- open termianl and check for the compatibility issues between mvn and jdk
+- after setting up the maven you can open the terminal and cd to the project folder
+- run mvn clean install 
+- run mvn test to run all the test cases in your project 
+- to run test cases in a file run e.g "mvn test -Dtest=UserControllerTest.java"
+- the reports will be created to this directory /QCFORCEx/E-commerce Project/Spring_Project/target/surefire-reports
+- you can also press ctrl + enter to run the test cases via terminal if the mvn or jdk is setup at IDE level 
 ## New Upgrade ( what's new)
 - Hibernate configuration added( database and tables automatically create when run the project)
 - Service classes provide reusable services throughout project

@@ -143,23 +143,22 @@ public class AdminController {
 		}
 	}
 	@RequestMapping(value = "categories",method = RequestMethod.POST)
-	public String addCategory(@RequestParam("categoryname") String category_name)
-	{
+	public String addCategory(@RequestParam("categoryname") String category_name) {
 		System.out.println(category_name);
+
 		if (!category_name.trim().isEmpty()) {
 			String cat = category_name.trim();
-
 			Category category = this.categoryService.addCategory(cat);
-			//category.setName(cat);
-			System.out.println(category.getName());
-			if (category.getName().equals(category_name)) {
+
+			if (category != null && category.getName() != null && category.getName().equals(cat)) {
+				// Category added successfully
 				return "redirect:/admin/categories";
 			}
-		} else {
-			return "redirect:/admin/categories";
 		}
+
 		return "redirect:/admin/categories";
 	}
+
 	@RequestMapping(value = "categories/delete",method = RequestMethod.POST)
 	public String removeCategoryDb(@RequestParam("id") int id)
 	{	

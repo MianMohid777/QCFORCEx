@@ -187,7 +187,7 @@ class AdminControllerTest {
         when(categoryService.addCategory(categoryName)).thenReturn(new Category());
 
         // Invoking the controller method
-        String result = adminController.addCategory(categoryName);
+        String result = (String) adminController.addCategory(categoryName);
 
         // Verifying the behavior
         assertEquals("redirect:/admin/categories", result);
