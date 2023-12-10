@@ -143,7 +143,7 @@ public class AdminController {
 		}
 	}
 	@RequestMapping(value = "categories",method = RequestMethod.POST)
-	public String addCategory(@RequestParam("categoryname") String category_name) {
+	public String addCategory(@RequestParam("categoryname") String category_name,RedirectAttributes redirectAttributes) {
 		System.out.println(category_name);
 
 		if (!category_name.trim().isEmpty()) {
@@ -152,7 +152,10 @@ public class AdminController {
 
 			if (category != null && category.getName() != null && category.getName().equals(cat)) {
 				// Category added successfully
-				return "redirect:/admin/categories";
+				redirectAttributes.addFlashAttribute("success", "Category Added Successfully");
+			} else {
+				// Failed to add category
+				redirectAttributes.addFlashAttribute("failure", "Failed to add Category");
 			}
 		}
 

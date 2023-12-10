@@ -15,6 +15,7 @@ import org.mockito.*;
 import org.springframework.ui.Model;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.servlet.mvc.support.RedirectAttributesModelMap;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -179,19 +180,28 @@ class AdminControllerTest {
         assertEquals(mockCategories, result.getModel().get("categories"));
     }
 
+
+
     @Test
     void testAddCategory() {
         // Mocking category name and service behavior
         String categoryName = "TestCategory";
         adminController.setCategoryService(categoryService);
+
+        // Mocking RedirectAttributes
+        RedirectAttributes redirectAttributes = new RedirectAttributesModelMap();
+
         when(categoryService.addCategory(categoryName)).thenReturn(new Category());
 
         // Invoking the controller method
-        String result = (String) adminController.addCategory(categoryName);
+        String result = adminController.addCategory(categoryName, redirectAttributes);
 
         // Verifying the behavior
         assertEquals("redirect:/admin/categories", result);
+
+
     }
+
 
     @Test
     void removeCategoryDb() {

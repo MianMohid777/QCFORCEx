@@ -21,6 +21,16 @@ public class categoryDao {
 
 	@Transactional
 	public Category addCategory(String name) {
+		List<Category> allCats = getCategories();
+
+		for(Category c: allCats)
+		{
+			if(c.getName().equalsIgnoreCase(name))
+			{
+				return null;
+			}
+		}
+
 		Category category = new Category();
 		category.setName(name);
 		this.sessionFactory.getCurrentSession().saveOrUpdate(category);
@@ -47,6 +57,16 @@ public class categoryDao {
 
 	@Transactional
 	public Category updateCategory(int id, String name) {
+
+		List<Category> allCats = getCategories();
+
+		for(Category c: allCats)
+		{
+			if(c.getName().equalsIgnoreCase(name))
+			{
+				return null;
+			}
+		}
 		Category category = this.sessionFactory.getCurrentSession().get(Category.class, id);
 		category.setName(name);
 
