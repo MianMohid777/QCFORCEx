@@ -27,6 +27,16 @@ public class productDao {
 	
 	@Transactional
 	public Product addProduct(Product product) {
+
+		List<Product> allProd = getProducts();
+
+		for(Product c: allProd)
+		{
+			if(c.getName().equalsIgnoreCase(product.getName()))
+			{
+				return null;
+			}
+		}
 		this.sessionFactory.getCurrentSession().save(product);
 		return product;
 	}
@@ -37,6 +47,16 @@ public class productDao {
 	}
 	@Transactional
 	public Product updateProduct(Product product){
+
+		List<Product> allProd = getProducts();
+
+		for(Product c: allProd)
+		{
+			if(c.getName().equalsIgnoreCase(product.getName()))
+			{
+				return null;
+			}
+		}
 		this.sessionFactory.getCurrentSession().update(String.valueOf(Product.class),product);
 		return product;
 	}

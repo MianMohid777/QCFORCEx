@@ -208,12 +208,12 @@ public class AdminController {
 	}
 
 	@RequestMapping(value = "products/add",method=RequestMethod.POST)
-	public String addProduct(@RequestParam("name") String name,@RequestParam("categoryid") int categoryId ,@RequestParam("price") int price,@RequestParam("weight") int weight, @RequestParam("quantity")int quantity,@RequestParam("description") String description,@RequestParam("productImage") String productImage) {
+	public String addProduct(@RequestParam("name") String name,@RequestParam("categoryid") int categoryId ,@RequestParam("price") int price,@RequestParam("weight") int weight, @RequestParam("quantity")int quantity,@RequestParam("description") String description,@RequestParam("productImage") String productImage,RedirectAttributes redirectAttributes) {
 		System.out.println(categoryId);
 		Category category = this.categoryService.getCategory(categoryId);
 		Product product = new Product();
 
-		if(!name.trim().isEmpty() && category != null && price > 0 && quantity > 0) {
+		if (!name.trim().isEmpty() && category != null && price > 0 && quantity > 0) {
 			product.setName(name);
 			product.setCategory(category);
 			product.setDescription(description);
@@ -221,8 +221,16 @@ public class AdminController {
 			product.setImage(productImage);
 			product.setWeight(weight);
 			product.setQuantity(quantity);
-			this.productService.addProduct(product);
+
+			if (this.productService.addProduct(product) != null)
+				redirectAttributes.addFlashAttribute("success", "Product Added Successfully");
+			else {
+
+				redirectAttributes.addFlashAttribute("failure", "Product, Already Added !");
+			}
 		}
+
+
 		return "redirect:/admin/products";
 	}
 
@@ -323,5 +331,12 @@ public class AdminController {
 		   this.userService.deleteUser(id);
 		return "redirect:/admin/customers";
 	}
+
+
+
+		public static void main(String[] args) {
+			String workingDirectory = System.getProperty("user.dir");
+			System.out.println("Working Directory: " + workingDirectory);
+		}
 
 }

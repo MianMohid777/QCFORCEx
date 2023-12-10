@@ -292,7 +292,7 @@ class AdminControllerTest {
 
         when(categoryService.getCategory(categoryId)).thenReturn(category);
 
-        String result = adminController.addProduct(name, categoryId, price, weight, quantity, description, productImage);
+        String result = adminController.addProduct(name, categoryId, price, weight, quantity, description, productImage,new RedirectAttributesModelMap());
 
         // Verifying behavior
         assertEquals("redirect:/admin/products", result);
